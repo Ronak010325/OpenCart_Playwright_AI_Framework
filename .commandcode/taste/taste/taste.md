@@ -1,0 +1,18 @@
+# Taste
+- When editing existing config files (e.g. `.env`, `playwright.config.ts`), only add the requested entries and preserve everything already there — explicitly stated as "don't delete or remove anything else." Confidence: 0.85
+- Prefers updating existing files in place (via an edit to the current file) rather than recreating or overwriting them — repeatedly phrased as "update the existing .env file" / "update the existing playwright.config.ts file" / "don't delete or remove anything else." Confidence: 0.85
+- For Playwright tests, wants failure diagnostics enabled: screenshots, video recording, and trace capture all retained on test failure. Confidence: 0.7
+- Prefers running Playwright tests in headed mode (headless: false). Confidence: 0.65
+- Wants to control when anything is executed — don't run or launch tests or scripts (e.g. runner files) without an explicit go-ahead; repeatedly interjects "don't run" / "don't run the tests yet". Confidence: 0.7
+- Wants the project to be free of TypeScript/IDE type errors, and is willing to add the missing config (e.g. a root `tsconfig.json`) to achieve it. Confidence: 0.6
+- Prefers new config files be based on an analysis of the existing project files (e.g. read `package.json` and inspect the source layout first) so the config fits the project rather than using generic defaults. Confidence: 0.5
+- Likes `.env` files organized into clearly labeled, commented sections grouped by concern (e.g. Enduser, API, DB, Admin) under a top-level app-environment variable (dev/qa/uat/prod), with sample/example values filled into comments next to each variable. Confidence: 0.6
+- Never delete or remove existing folders (or files) without asking first — explicitly stated as "don't delete, remove any existing folder without asking me." Confidence: 0.85
+- Wants changes tightly scoped to the request — "do not make any changes to any other files" / don't touch unrelated files. Confidence: 0.75
+- Before installing dependencies, check `package.json` to see whether the needed package already exists, and install only what's genuinely required. Confidence: 0.6
+- Wants temporary/scratch files created only to perform an operation (e.g. a throwaway Node script) to be deleted afterward, while the desired result files are kept — explicitly stated as "do not create any other files in any other folder structure; if created to perform some operations then delete that particular file ... don't delete the desired results." Confidence: 0.8
+- Prefers setup/runner scripts (e.g. `globalSetup.ts`, `test-runner.ts`) placed in the project root directory. Confidence: 0.55
+- Uses Allure for Playwright test reporting — wants the Allure CLI installed, reports generated to a project-named folder, and the report opened automatically (`allure open`) after each test run (e.g. from the teardown hook). Confidence: 0.6
+- Wants helper/runner scripts (e.g. `test-runner.ts`) to be directly runnable from the CLI (via `tsx`), not just importable by the framework — so scripts should carry an entry-point guard that executes when run directly. Confidence: 0.5
+- Prefers installing CLI tools globally (`npm i -g <tool>`) rather than as a local dev dependency, and verifies the CLI works (e.g. `allure --version`) after installing. Confidence: 0.5
+- Prefers naming helper/config scripts after the concept or hook they implement (e.g. `globalSetup.ts`, `globalTeardown.ts`) rather than generic names like `test-runner.ts`. Confidence: 0.5
