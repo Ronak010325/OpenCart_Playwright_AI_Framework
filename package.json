@@ -7,7 +7,7 @@
     "test": "npx playwright test web/example.spec.ts",
     "test:headed": "npx playwright test web/example.spec.ts --headed",
     "test:chromium": "npx playwright test web/example.spec.ts --project=chromium --headed",
-    "show-report": "npx playwright show-report reports"
+    "show-report": "npx playwright show-report ./custom-report"
   },
   "keywords": [],
   "author": "",
