@@ -1,6 +1,6 @@
 # Utility Files – Prompts
 
-**Target folder:** `utils/`
+**Target folder:** `utilities/`
 
 ## Common Requirements
 

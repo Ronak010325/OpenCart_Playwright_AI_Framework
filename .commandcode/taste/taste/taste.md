@@ -16,3 +16,4 @@
 - Wants helper/runner scripts (e.g. `test-runner.ts`) to be directly runnable from the CLI (via `tsx`), not just importable by the framework — so scripts should carry an entry-point guard that executes when run directly. Confidence: 0.5
 - Prefers installing CLI tools globally (`npm i -g <tool>`) rather than as a local dev dependency, and verifies the CLI works (e.g. `allure --version`) after installing. Confidence: 0.5
 - Prefers naming helper/config scripts after the concept or hook they implement (e.g. `globalSetup.ts`, `globalTeardown.ts`) rather than generic names like `test-runner.ts`. Confidence: 0.5
+- Works from a `prompts/` folder of markdown spec files (e.g. `utilities_prompts.md`) that describe the files/APIs to build, and points the agent at the spec file to implement exactly what it describes. Confidence: 0.5
