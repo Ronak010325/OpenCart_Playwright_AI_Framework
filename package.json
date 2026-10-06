@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test web/example.spec.ts",
-    "test:headed": "npx playwright test web/example.spec.ts --headed",
-    "test:chromium": "npx playwright test web/example.spec.ts --project=chromium --headed",
-    "show-report": "npx playwright show-report ./custom-report"
+    "test": "npx playwright test web/registrationTest.spec.ts",
+    "test:headed": "npx playwright test web/registrationTest.spec.ts --headed",
+    "test:chromium": "npx playwright test web/registrationTest.spec.ts --project=chromium --headed",
+    "show-report": "npx playwright show-report ./custom-report",
+    "allure-report": "allure open ./allure-reports/OpenCart"
   },
   "keywords": [],
   "author": "",

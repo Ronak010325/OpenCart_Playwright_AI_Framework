@@ -10,5 +10,11 @@
     "email": "adcxyz@gmail.com",
     "password": "abcxyz",
     "expected": "failure"
+  },
+  {
+    "testName": "Valid Login",
+    "email": "demoemail@gmail.com",
+    "password": "demoemail123",
+    "expected": "success"
   }
 ]

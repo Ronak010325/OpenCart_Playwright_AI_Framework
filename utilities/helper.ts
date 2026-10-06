@@ -1,3 +1,8 @@
+import dotenv from "dotenv";
+import path from "path";
+
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
+
 export class Helper {
     static convertPriceToNumber(price: string): number {
         const cleanedPrice = price.replace(/[^0-9.]/g, '');
@@ -14,8 +19,8 @@ export class Helper {
 
     static getLoginDetails() {
         return {
-            email: 'ronakyadav1325@gmail.com',
-            password: 'ronak@1325',
+            email: process.env.ENDUSER_EMAIL,
+            password: process.env.ENDUSER_PASSWORD,
         };
     }
 }

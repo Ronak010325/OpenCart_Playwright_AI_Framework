@@ -3,16 +3,19 @@ import { parse } from 'csv-parse/sync';
 import * as XLSX from 'xlsx';
 
 export class DataProvider {
+    // This Method Returns Arrays of [{}]
     static readJson(filePath: string) {
         const fileContent = fs.readFileSync(filePath, 'utf8');
         return JSON.parse(fileContent);
     }
-
+    
+    // This Method Returns Arrays of [[]]
     static readCsv(filePath: string) {
         const fileContent = fs.readFileSync(filePath);
         return parse(fileContent, { columns: true, skip_empty_lines: true });
     }
 
+    // This Method Returns Arrays of [[]]
     static readExcel(filePath: string) {
         const workbook = XLSX.readFile(filePath);
         const sheetName = workbook.SheetNames[0];
