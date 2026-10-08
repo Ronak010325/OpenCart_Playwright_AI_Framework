@@ -16,4 +16,7 @@
 - Wants helper/runner scripts (e.g. `test-runner.ts`) to be directly runnable from the CLI (via `tsx`), not just importable by the framework — so scripts should carry an entry-point guard that executes when run directly. Confidence: 0.5
 - Prefers installing CLI tools globally (`npm i -g <tool>`) rather than as a local dev dependency, and verifies the CLI works (e.g. `allure --version`) after installing. Confidence: 0.5
 - Prefers naming helper/config scripts after the concept or hook they implement (e.g. `globalSetup.ts`, `globalTeardown.ts`) rather than generic names like `test-runner.ts`. Confidence: 0.5
+- Wants the Playwright CLI (`playwright-cli`) used to drive the live application — opening pages, taking snapshots, clicking/filling by ref, and evaluating the DOM — rather than assuming locators/behaviour; explicitly instructed "Use Playwright CLI". Confidence: 0.8
+- Prefers resolving file paths (e.g. the `.env` location for `dotenv.config`) relative to `process.cwd()` rather than `__dirname` — explicitly instructed "use process.cwd() instead of __dirname." Confidence: 0.75
 - Works from a `prompts/` folder of markdown spec files (e.g. `utilities_prompts.md`) that describe the files/APIs to build, and points the agent at the spec file to implement exactly what it describes. Confidence: 0.5
+- Expects new work to follow the framework conventions documented in a project markdown file (e.g. referenced as `@playwright-mcp-context.md`) rather than inventing a new structure. Confidence: 0.6

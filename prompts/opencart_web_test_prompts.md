@@ -35,25 +35,28 @@ The registration completes successfully and the confirmation message is displaye
 
 # 2. Valid Login Flow
 
+```
 Validate successful customer login.
 
 1. Open the application.
 2. Navigate to **My Account → Login**.
 3. Verify that the login page is displayed.
-4. Enter valid customer credentials from the project's configured test data.
+4. Enter valid customer credentials from the project's configured env file as ENDUSER_EMAIL and ENDUSER_PASSWORD.
 5. Submit the login form.
 6. Verify successful authentication.
 7. Verify that the user is redirected to the **My Account** section.
 8. Verify that the account dashboard or appropriate authenticated account navigation is visible.
 
-## Expected Result
+Expected Result
 
 Valid credentials are accepted and the customer reaches the authenticated My Account area.
+```
 
 ---
 
 # 3. Invalid Login Flow
 
+```
 Verify login failure with invalid customer credentials.
 
 1. Open the application.
@@ -68,9 +71,10 @@ Expected warning for the supplied application scenario:
 
 `Warning: No match for E-Mail Address and/or Password.`
 
-## Expected Result
+Expected Result
 
 The invalid login is rejected and the expected warning is displayed.
+```
 
 ---
 
@@ -211,3 +215,34 @@ For each data row:
 ## Expected Result
 
 Loading the external test data produces one independent test per row, and the actual OpenCart login result matches each row's `expected` value.
+
+## Sample Prompt (User Registration Flow)
+
+```
+Application URL: http://localhost/opencart/upload/ 
+  
+Implement WEB scenario following the framework conventions defined in the @playwright-mcp-context.md file 
+using the Playwright-CLI                                     
+Validate successful customer registration in the OpenCart frontend.                                 
+  1. Open the application.                           
+  2. Navigate to My Account → Register.              
+  3. Verify that the registration page is displayed. 
+  4. Generate a unique customer email.               
+  5. Enter valid values for:                         
+  First Name                                         
+  Last Name                                          
+  Email Address                                      
+  Telephone                                          
+  Password                                           
+  Password Confirmation                              
+  6. Accept the Privacy Policy.                      
+  7. Submit the registration form.                   
+  8. Verify that registration succeeds.              
+  9. Verify the account-created confirmation, such   
+  as “Your Account Has Been Created!”.               
+  10. Verify that the newly created account is       
+  available through the expected account navigation. 
+  
+Expected Result:                                   
+  The registration completes successfully and the confirmation message is displayed.
+```

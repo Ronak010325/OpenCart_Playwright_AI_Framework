@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(npx playwright-cli -s=opencart snapshot)",
+      "Shell(npx playwright-cli -s=opencart click e238)",
+      "Shell(npx playwright-cli -s=opencart eval \"() => Array.from(document.querySelectorAll('input, select, textarea')).map(i => ({tag: i.tagName, id: i.id, name: i.name, type: i.type, placeholder: i.placeholder || ''}))\")",
+      "Shell(npx playwright-cli -s=opencart fill f1e89 \"John\")",
+      "Shell(npx playwright-cli -s=opencart click f1e116)",
+      "Shell(npx playwright-cli -s=opencart click f2e87)",
+      "Shell(npx playwright-cli close-all)",
+      "Shell(npx playwright test tests/web/registration.spec.ts --project=chromium --reporter=line)",
+      "Shell(playwright-cli:*)",
+      "Shell(npx tsc --noEmit)",
+      "Shell(del:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

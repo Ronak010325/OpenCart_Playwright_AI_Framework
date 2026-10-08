@@ -101,6 +101,15 @@ export class RandomDataUtil {
         return faker.number.int({ min: 1, max: 999 });
     }
 
+    static generateRegistrationPayload() {
+        return {
+            firstName: this.getFirstName(),
+            lastName: this.getLastName(),
+            email: `qaauto${Date.now()}@example.com`,
+            password: this.getPassword(10),
+        };
+    }
+
     static generateInvalidLoginPayload() {
         return {
             username: this.getUsername(),

@@ -24,11 +24,11 @@ async function globalTeardown() {
     cwd: __dirname,
   });
 
-  spawn(`allure open "${reportDir}"`, {
-    detached: true,
-    stdio: 'ignore',
-    shell: true,
-  }).unref();
+  // spawn(`allure open "${reportDir}"`, {
+  //   detached: true,
+  //   stdio: 'ignore',
+  //   shell: true,
+  // }).unref();
 }
 
 export default globalTeardown;

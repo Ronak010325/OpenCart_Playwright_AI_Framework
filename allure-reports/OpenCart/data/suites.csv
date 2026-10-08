@@ -1,7 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","8969","has title","firefox","2026-10-02","passed","2026-10-02","","web\example.spec.ts","",""
-"","7762","get started link","chromium","2026-10-02","passed","2026-10-02","","web\example.spec.ts","",""
-"","4851","has title","webkit","2026-10-02","passed","2026-10-02","","web\example.spec.ts","",""
-"","4472","get started link","webkit","2026-10-02","passed","2026-10-02","","web\example.spec.ts","",""
-"","6070","has title","chromium","2026-10-02","passed","2026-10-02","","web\example.spec.ts","",""
-"","20095","get started link","firefox","2026-10-02","passed","2026-10-02","","web\example.spec.ts","",""
+"","8762","Customer registration test @master @sanity @regression @web @end-to-end","chromium","2026-10-08","passed","2026-10-08","","web\registration.spec.ts","",""
