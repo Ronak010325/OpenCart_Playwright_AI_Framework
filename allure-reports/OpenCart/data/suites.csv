@@ -1,2 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","8762","Customer registration test @master @sanity @regression @web @end-to-end","chromium","2026-10-08","passed","2026-10-08","","web\registration.spec.ts","",""
+"","9424","Customer registration test @master @sanity @regression @web @end-to-end","webkit","2026-10-13","passed","2026-10-13","","web\registration.spec.ts","",""
+"","8115","Customer registration test @master @sanity @regression @web @end-to-end","chromium","2026-10-13","passed","2026-10-13","","web\registration.spec.ts","",""
+"","16021","Customer registration test @master @sanity @regression @web @end-to-end","firefox","2026-10-13","passed","2026-10-13","","web\registration.spec.ts","",""
